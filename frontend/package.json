@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "verify:compare": "esbuild scripts/verify-compare.ts --bundle --platform=node --format=esm --outfile=node_modules/.cache/verify-compare.mjs && node node_modules/.cache/verify-compare.mjs"
   },
   "dependencies": {
     "pinia": "^2.1.7",
